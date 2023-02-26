@@ -6,6 +6,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import style.WtContainer
 import style.WtSections
+import style.WtText
 
 @Composable
 fun Header(
@@ -24,13 +25,11 @@ fun Header(
         }) {
             navigationMenu.map { menu ->
                 Span({
-                    style {
-                        color(Color.white)
-                        fontWeight(900)
-                        fontSize(30.px)
-                    }
+                    classes(WtText.headerMenu)
                 }) {
-                    Text(menu)
+                    A {
+                        Text(menu)
+                    }
                 }
             }
         }

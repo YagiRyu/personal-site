@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import style.AppStylesheet
+import style.WtText
 
 @Composable
 fun HomeRoot() {
@@ -37,6 +38,9 @@ private fun Home(
             alignItems(AlignItems.Center)
             flexDirection(FlexDirection.Column)
             height(90.vh)
+            marginLeft(10.px)
+            marginRight(10.px)
+            textAlign("center")
             property("margin-top", "auto")
             property("margin-bottom", "auto")
         }
@@ -48,19 +52,13 @@ private fun Home(
             }
         )
         Span(attrs = {
-            style {
-                color(rgb(233, 0, 100))
-                fontSize(70.px)
-            }
+            classes(WtText.homeTitle)
         }) {
             Text("Hi! I'm Ryutaro Yagi👋")
         }
         text.map {
             Span(attrs = {
-                style {
-                    color(Color.white)
-                    fontSize(20.px)
-                }
+                classes(WtText.basic)
             }) {
                 Text(it)
             }

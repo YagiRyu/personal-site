@@ -11,8 +11,8 @@ object AppCSSVariables {
     val wtHorizontalLayoutGutter by variable<CSSUnitValue>()
     val wtFlowUnit by variable<CSSUnitValue>()
 
-    val wtHeroFontSize by variable<CSSUnitValue>()
-    val wtHeroLineHeight by variable<CSSUnitValue>()
+    val wtHomeFontSize by variable<CSSUnitValue>()
+    val wtHomeLineHeight by variable<CSSUnitValue>()
     val wtSubtitle2FontSize by variable<CSSUnitValue>()
     val wtSubtitle2LineHeight by variable<CSSUnitValue>()
     val wtH2FontSize by variable<CSSUnitValue>()
@@ -46,6 +46,7 @@ object AppStylesheet : StyleSheet() {
 
         universal style {
             margin(0.px)
+            color(Color.white)
             property("font-family", "Gill Sans")
         }
 
