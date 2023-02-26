@@ -2,13 +2,33 @@ package pages
 
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.dom.*
 import style.AppStylesheet
 
 @Composable
-fun HomeRoot(
-    icons: Map<String, String>
+fun HomeRoot() {
+    val text = listOf(
+        "I'm a software engineer in Japan\uD83C\uDDEF\uD83C\uDDF5",
+        "I mainly develop Android applications and I'm also interested in developing iOS applications\uD83E\uDDD1\uD83C\uDFFB\u200D\uD83D\uDCBB",
+        "I love Kotlin and mobile app development\uD83D\uDC9A",
+    )
+
+    val icons = mapOf(
+        "twitter.png" to "https://twitter.com/yagiryuuu",
+        "github.png" to "https://github.com/YagiRyu",
+        "zenn.png" to "https://zenn.dev/yagiryuuu",
+    )
+
+    Home(
+        text = text,
+        icons = icons
+    )
+}
+
+@Composable
+private fun Home(
+    text: List<String>,
+    icons: Map<String, String>,
 ) {
     Div({
         style {
@@ -29,11 +49,21 @@ fun HomeRoot(
         )
         Span(attrs = {
             style {
-                color(rgb(221, 170, 0))
+                color(rgb(233, 0, 100))
                 fontSize(70.px)
             }
         }) {
             Text("Hi! I'm Ryutaro Yagi👋")
+        }
+        text.map {
+            Span(attrs = {
+                style {
+                    color(Color.white)
+                    fontSize(20.px)
+                }
+            }) {
+                Text(it)
+            }
         }
         Div({
             style {

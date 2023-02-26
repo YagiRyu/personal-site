@@ -19,12 +19,6 @@ fun main() {
         "Project"
     )
 
-    val icons = mapOf(
-        "twitter.png" to "https://twitter.com/yagiryuuu",
-        "github.png" to "https://github.com/YagiRyu",
-        "zenn.png" to "https://zenn.dev/yagiryuuu",
-    )
-
     renderComposable(rootElementId = "root") {
         Style(AppStylesheet)
         Layout {
@@ -33,7 +27,7 @@ fun main() {
             )
             MainContentLayout {
                 HashRouter(initPath = "/") {
-                    HomeRoot(icons = icons)
+                    HomeRoot()
                     route("/about") {
                         About()
                     }
