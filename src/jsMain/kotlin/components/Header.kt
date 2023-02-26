@@ -7,10 +7,11 @@ import org.jetbrains.compose.web.dom.*
 import style.WtContainer
 import style.WtSections
 import style.WtText
+import utils.NavigationMenu
 
 @Composable
 fun Header(
-    navigationMenu: List<String>,
+    navigationMenu: List<NavigationMenu>,
 ) {
     Section(attrs = {
         classes(WtSections.wtSectionBgGrayDark)
@@ -27,8 +28,10 @@ fun Header(
                 Span({
                     classes(WtText.headerMenu)
                 }) {
-                    A {
-                        Text(menu)
+                    A(
+                        href = menu.link
+                    ) {
+                        Text(menu.menu)
                     }
                 }
             }
