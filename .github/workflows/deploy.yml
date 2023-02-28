@@ -19,6 +19,17 @@ jobs:
           ./gradlew jsBrowserProductionWebpack
       - name: Deploy 🚀 to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
+        permissions:
+          actions: write
+          checks: write
+          contents: write
+          deployments: write
+          issues: write
+          packages: write
+          pull-requests: write
+          repository-projects: write
+          security-events: write
+          statuses: write
         with:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           BRANCH: github-pages # デプロイ用のファイルを配置するブランチ名
