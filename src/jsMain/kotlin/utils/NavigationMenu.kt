@@ -2,19 +2,19 @@ package utils
 
 enum class NavigationMenu(val link: String, val menu: String) {
     Home(
-        link = "/",
+        link = "personal-site/",
         menu = "Home"
     ),
     About(
-        link = "/about",
+        link = "personal-site/about",
         menu = "About"
     ),
     Article(
-        link = "/article",
+        link = "personal-site/article",
         menu = "Article"
     ),
     Project(
-        link = "/project",
+        link = "personal-site/project",
         menu = "Project"
     ),
 }
