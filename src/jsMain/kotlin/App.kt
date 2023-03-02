@@ -19,22 +19,22 @@ fun App() {
     )
 
     Style(AppStylesheet)
-    BrowserRouter(initPath = "/personal-site") {
+    BrowserRouter(initPath = "/") {
         val router = Router.current
 
         Layout {
             Header(navigationMenu = navigationMenu)
             MainContentLayout {
-                route("/personal-site") {
+                route("/") {
                     HomeRoot()
                 }
-                route("/personal-site/about") {
+                route("/about") {
                     About()
                 }
-                route("/personal-site/article") {
+                route("/article") {
                     Article()
                 }
-                route("/personal-site/project") {
+                route("/project") {
                     Project()
                 }
                 noMatch {

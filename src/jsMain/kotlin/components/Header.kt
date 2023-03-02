@@ -13,6 +13,7 @@ import utils.NavigationMenu
 fun Header(
     navigationMenu: List<NavigationMenu>,
 ) {
+    val router = Router.current
     Section(attrs = {
         classes(WtSections.wtSectionBgGrayDark)
     }) {
@@ -25,12 +26,18 @@ fun Header(
             }
         }) {
             navigationMenu.map { menu ->
-                Span({
-                    classes(WtText.headerMenu)
+                Button({
+                    onClick {
+                        router.navigate(to = menu.link)
+                    }
+                    style {
+                        backgroundColor(Color.transparent)
+                        border(0.px)
+                    }
                 }) {
-                    A(
-                        href = menu.link
-                    ) {
+                    Span({
+                        classes(WtText.headerMenu)
+                    }) {
                         Text(menu.menu)
                     }
                 }
