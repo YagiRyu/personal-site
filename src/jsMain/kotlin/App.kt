@@ -23,7 +23,7 @@ fun App() {
         Layout {
             Header(navigationMenu = navigationMenu)
             MainContentLayout {
-                route("/") {
+                route("/personal-site") {
                     HomeRoot()
                 }
                 route("/about") {
