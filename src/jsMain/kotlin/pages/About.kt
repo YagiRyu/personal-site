@@ -23,7 +23,7 @@ fun About() {
                 fontSize(50.px)
             }
         }) {
-            Text("Coming soon.....\uD83D\uDE80")
+            Text("Coming soon......\uD83D\uDE80")
         }
     }
 }
