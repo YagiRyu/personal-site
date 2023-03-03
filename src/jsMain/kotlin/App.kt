@@ -20,8 +20,6 @@ fun App() {
 
     Style(AppStylesheet)
     BrowserRouter(initPath = "/") {
-        val router = Router.current
-
         Layout {
             Header(navigationMenu = navigationMenu)
             MainContentLayout {
